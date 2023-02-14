@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;
+    }
+
+    .operwlahissa{
+        box-shadow: 0px 1px 3px 0px gray;
+    }
+    .operwlahissa a{
+        font-weight: 600;
+        color: rgb(54, 52, 52);
+    }
+    .pehlaBox{
+        display: flex !important;
+        justify-content: flex-start !important;
+        gap: 100px;
+    }
+    .pehlaBox .btn{
+      text-decoration: none;
+        margin-left: 15px;
+        transition: 0.6s ease;
+    }
+    .pehlaBox .btn:hover{
+        background-color: rgb(74, 171, 134);
+        color: white;
+    }
+    .icon i{
+     font-size: 18px;
+      width: 35px;
+      height: 30px;
+      background-color: whitesmoke;
+      padding: 7px 8px;
+      border-radius: 5px;
+      margin-left: 5px;
+      transition: all 0.5s ;
+    }
+    .icon i:hover{
+        transform: scale(1.1);
+    }
+    .main{
+        width: 100%;
+        height: 500px;
+        background-color: white;
+        padding-top: 10px;
+    }
+    .slider{
+        display: flex !important;
+        justify-content: space-around;
+        padding: 20px;
+
+    }
+    .description{
+        margin: 30px;
+        padding: 60px 50px;
+    }
+    .description p{
+        font-size: 25px;
+        width: 400px;
+        /* border: 1px solid black; */
+        color: rgba(9, 9, 40, 0.795);
+    }
+    .description h1{
+        font-size: 50px;
+        width: 400px;
+        color: rgba(9, 9, 40, 0.795);
+    }
+    .description h4{
+        color: rgb(74, 171, 134);
+    }
+    .description button{
+        color: white;
+        background-color: rgba(9, 9, 40, 0.795);
+        border: none;
+        width: 120px;
+        height: 40px;
+        margin-left: 5px;
+    }
+    .slider img{
+        height: 400px;
+        width: 50%;
+    }
+    .cards{
+        background-color: whitesmoke;
+        width: 100%;
+        height: 1250px;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .cards h4{
+        color: rgb(74, 171, 134);
+    }
+    .cards h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: rgba(9, 9, 40, 0.795);
+        margin-bottom: 40px;
+    }
+    .innerCard{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+      
+    }
+    .innerCard img{
+      margin-left: 20px;
+      width: 290px;
+    }
+    .innerCard i{
+      color: rgb(74, 171, 115);
+      margin-bottom: 10px;
+    }
+    .innerCard a{
+      color: white;
+      background-color: rgba(13, 13, 68, 0.927) !important;
+      border-radius: 0px;
+    }
+    .innerCard span{
+      font-weight: 600;
+      color: rgb(74, 171, 115);
+      margin: 10px;
+      font-size: 20px;
+    }
+    .about{
+      width: 100%;
+      height: 500px;
+      background-color: white;
+      text-align: center;
+
+    }
+    .about p{
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 0px;
+      color: rgb(74, 171, 115);
+    }
+    .about h1{
+      color: rgba(13, 13, 68, 0.927);
+    }
+    .banner{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 10px;
+    }
+    .banner img{
+      margin-left: 80px;
+      width: 550px;
+      height: 350px;
+    }
+
+    .detail{
+      background-color: whitesmoke;
+      padding-top: 10px;
+      margin-top: 20px;
+      margin-right: 40px;
+      width: 600px;
+      height: 330px;
+      border: 1px solid gray;
+      box-shadow: 2px 1px 3px 1px gray;
+    }
+    .para2{
+      font-size: 14px !important;
+      margin: 20px 20px!important;
+      color: rgb(168, 166, 166) !important;
+      text-align: left;
+      
+    }
+    .bannerBtn button{
+      border: 1px solid gray;
+      font-weight: 500;
+      color: rgb(62, 160, 103);
+      width: 150px;
+      height: 40px;
+      margin: 0px 2px;
+      margin-bottom: 8px;
+      transition: 0.7s ease;
+    }
+    .bannerBtn button:hover{
+      background-color: rgb(62, 160, 103);
+      color: white;
+      border: none;
+      transform: translateY(-10px);
+    }
+    .learmore{
+      cursor: pointer;
+      background: transparent;
+      border: none !important;
+      color: white !important;
+      background-color: rgba(13, 13, 68, 0.927);
+    }
+    .learmore:hover{
+      background-color: rgba(13, 13, 68, 0.927) !important;
+      color: white !important;
+      transform: scale(1.1) !important;
+      
+    }
+
+    .menu{
+      /* border: 1px solid rebeccapurple; */
+      padding-bottom: 40px;
+        background-color: whitesmoke;
+        width: 100%;
+        height: 100%;
+        padding-top: 50px;
+        text-align: left;
+        flex-wrap: wrap;
+        
+    }
+    .menu h4{
+        color: rgb(74, 171, 134);
+        text-align: center;
+      }
+    .menu h1{
+      text-align: center;
+        font-weight: 700;
+        font-size: 25px;
+        color: rgba(9, 9, 40, 0.795);
+        margin-bottom: 20px;
+    }
+    .menu p{
+      color: grey;
+      font-size: 12px !important;
+      margin-bottom: 0px;
+    }
+    .menu .innerCard{
+        display: flex;
+        justify-content: center;
+        /* margin-top: 10px; */
+        gap: 10px;
+
+      
+    }
+    .menu .innerCard img{
+      border-radius: 0px;
+      margin:15px 16px;
+      width: 328px;
+      height: 200px;
+      margin-bottom: 0px;
+    }
+    .menu .innerCard i{
+      color: rgb(36, 173, 93);
+      margin-bottom: 10px;
+    }
+    .menu .innerCard a{
+      margin-top: 0px;
+      width: 150px;
+      color: white;
+      background-color: rgba(13, 13, 68, 0.927) !important;
+      border-radius: 0px;
+    }
+    .menu .innerCard span{
+      font-weight: 600;
+      color: rgb(74, 171, 115);
+      padding: 15px 8px;
+      font-size: 25px;
+    }
+    .menuCard{
+      width: 360px;
+      height: 430px;
+    }
+    #heart{
+      color: rgb(36, 35, 35) !important;
+      background-color: whitesmoke;
+      box-shadow: 0px 0px 0px 1px rgb(209, 208, 208);
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      padding: 7px;
+      border-radius: 3px;
+    }
+    .review{
+      width: 100%;
+      height: 500px;
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .review h1{
+      color: rgba(13, 13, 68, 0.927);
+      text-align: center;
+      
+    }
+    .review h4{
+      color: rgb(36, 173, 93);
+      text-align: center;
+      margin-bottom: 0px;
+    }
+    .card-wrapper{
+      display: flex;
+      justify-content: center;
+      /* border: 1px solid black; */
+      width: 90%;
+      height: 350px;
+      gap: 15px;
+    }
+    .card-wrapper img{
+      padding: 10px 10px;
+      /* border: 1px solid red; */
+      width: 80px;
+      height: 90px;
+      border-radius: 100%;
+    }
+    .card-wrapper i{
+      margin-top: 0px;
+      color:  rgb(36, 173, 93);
+    } 
+    .card-wrapper h3{
+      color: rgba(13, 13, 68, 0.927);
+    }
+    .card-wrapper p{
+      color: rgb(111, 110, 110);
+    }
+    .orderBox{
+      padding-top: 30px;
+      /* border: 1px solid black; */
+      width: 100%;
+      height: 650px;
+      background-color: whitesmoke;
+    }
+    .orderBox h4{
+      text-align: center;
+      color: rgb(36, 173, 93);
+      margin-bottom: 0px;
+    }
+    .orderBox h1{
+      text-align: center;
+      margin-top: 0px;
+      color: rgba(13, 13, 68, 0.927);
+    }
+    .smallBox{
+      position: relative;
+      /* border: 1px solid red; */
+      max-width: 60%;
+      height: 480px;
+      display: flex;
+      justify-content: center;
+      margin:20px 260px ;
+    }
+    .smallBox .ordersheet{
+      background-color: white;
+      padding: 10px 20px;
+      box-shadow: 1px 1px 3px 0px gray;
+      max-width: 47%;
+
+    }
+    .ordersheet input{
+      color: gray;
+      padding:0px 10px;
+      width: 300px;
+      height: 35px;
+      border: none;
+      background-color: whitesmoke;
+      margin-bottom: 8px;
+    }
+    .ordersheet p{
+      margin-bottom: 5px;
+      color: gray;
+    }
+    .ordersheet textarea{
+      max-width: 500px;
+      padding-left: 5px;
+      border: none;
+      background-color: whitesmoke;
+    }
+    .orderBtn{
+      position: absolute;
+      bottom: 13px;
+      width: 120px;
+      height: 30px;
+      margin-left: 5px;
+      border: 1px solid rgba(13, 13, 68, 0.927);
+      background-color: rgba(13, 13, 68, 0.927);
+      color: white;
+    }
+    footer{
+      position: relative;
+      max-width:100% ;
+      height: 400px;
+      text-align: center;
+    }
+
+    footer .footerBox{
+      padding: 40px 0px;
+      display: flex;
+      gap: 120px;
+      justify-content: center;
+    }
+    .footerlist li{
+      list-style-type: none;
+      margin-bottom: 12px;
+      color: grey;
+    }
+    footer p{
+      font-size: 18px;
+    }
+
+   .footerlist #tags{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgba(13, 13, 68, 0.927);
+    }
+
+    .backToHome i{
+      position: absolute;
+      font-size: 20px;
+      right: 50px;
+      margin-top: 30px;
+      padding-top: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgb(74, 171, 115);
+      color: white;
+    }
+
+</style>
+<body>
+
+    <!-- header -->
+
+    <section class="header">
+        <nav class="navbar bg-body-light operwlahissa">
+            <div class="container pehlaBox">
+              <a class="navbar-brand" href="#">
+                <img src="./images/food logo.webp" alt="" width="55" height="50" class="d-inline-block">
+                Eat&Meet
+                </a>
+                <div>
+                <a href="#Home" class="btn">Home</a>
+                <a href="#dishes" class="btn">Dishes</a>
+                <a href="#About" class="btn">About</a>
+                <a href="#Menu" class="btn">Menu</a>
+                <a href="#Review" class="btn">Review</a>
+                <a href="#Order" class="btn">Order</a>
+            </div>
+            <div class="icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </div>
+            </div>
+          </nav>
+    </section>
+
+    <!-- second header -->
+    <section class="main" id="Home">
+        <div id="carouselExampleIndicators" class="carousel-dark carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner ">
+              <div class="carousel-item active slider">
+                <div class="description">
+                    <h4>Our Special Dish</h4>
+                    <h1>Hot Pizza</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt </p>
+                    <button>Order Now</button>
+                </div>
+                <img src="./images/pizza.webp" class="d-block" alt="">
+              </div>
+              <div class="carousel-item slider">
+                <div class="description">
+                    <h4>Our Special Dish</h4>
+                    <h1>Hot Pizza</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt </p>
+                    <button>Order Now</button>
+                  </div>
+                  <img src="./images/biryani.jpg" class="d-block " alt="...">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <!-- 2nd main -->
+
+    <section class="cards" id="dishes">
+        <h4>Our Dishes</h4>
+        <h1>Popular Dishes</h1>
+
+        <div class="innerCard ">
+        <div class="card" style="width: 20rem;">
+            <img src="./images/cake.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tasty Food</h5>
+              <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stoke"></i>
+                  <i class="fa-regular fa-star"></i>
+             <br>
+                  <span>Rs.1400</span>
+              <a href="#" class="btn">Add to Cart</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem;">
+            <img src="./images/chicken legs.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tasty Food</h5>
+              <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+             <br>
+                  <span>Rs.1400</span>
+              <a href="#" class="btn">Add to Cart</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem;">
+            <img src="./images/pizza 2.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tasty Food</h5>
+              <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+             <br>
+                  <span>Rs.1400</span>
+              <a href="#" class="btn">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="innerCard">
+            <div class="card" style="width: 20rem;">
+                <img src="./images/broast.webp" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                  <h5 class="card-title">Tasty Food</h5>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <br>
+                  <span>Rs.1400</span>
+                  <a href="#" class="btn">Add to Cart</a>
+                </div>
+              </div>
+              <div class="card" style="width: 20rem;">
+                <img src="./images/cake2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tasty Food</h5>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+                 <br>
+                  <span>Rs.1400</span>
+                  <a href="#" class="btn">Add to Cart</a>
+                </div>
+              </div>
+              <div class="card" style="width: 20rem;">
+                <img src="./images/biryani.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tasty Food</h5>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+                 <br>
+                  <span>Rs.1400</span>
+                  <a href="#" class="btn">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="innerCard">
+                <div class="card" style="width: 20rem;">
+                    <img src="./images/meat.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tasty Food</h5>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+                     <br>
+                  <span>Rs.1400</span>
+                      <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 20rem;">
+                    <img src="./images/donut.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tasty Food</h5>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star"></i>
+                     <br>
+                  <span>Rs.1400</span>
+                      <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 20rem;">
+                    <img src="./images/burger.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tasty Food</h5>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                     <br>
+                  <span>Rs.1400</span>
+                      <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+    </section>
+
+    <!-- about us -->
+
+    <section class="about" id="About">
+        <p>About Us</p>
+        <h1>WHY CHOOSE US?</h1>
+        <div class="banner">
+          <img src="./images/vegi.jpg" alt="">
+          <div class="detail">
+            <h1 >Best Food In The Country</h1>
+            <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad harum accusantium id voluptas expedita eveniet obcaecati molestias sed provident perspiciatis earum illum eum laborum ipsa ratione vero quia eligendi et voluptate aspernatur, <br> aperiam tempora tenetur. Quam et facere ipsum similique vitae iusto consequuntur eum ut ducimus! Repellendus dolore, temporibus iste ex enim officia explicabo libero modi? Magni facere perferendis ipsa ex commodi rerum dicta excepturi.</p>
+            <div class="bannerBtn">
+              <button><i class="fa-solid fa-truck-fast"></i> Free Delivery</button>
+              <button><i class="fa-solid fa-dollar-sign"></i>Easy Payment</button>
+              <button><i class="fa-solid fa-headset"></i>24/7 Service</button>
+              <button class="learmore">Learn More</button>
+              <br>
+            </div>
+          </div>
+        </div>
+    </section>
+
+      <!-- menu -->
+
+      <section class="menu" id="Menu">
+        <h4>Our Menu</h4>
+        <h1>TODAY'S SPECIALITY</h1>
+        <div class="innerCard">
+        <div class="card menuCard">
+          <i id="heart" class="fa fa-heart" aria-hidden="true"></i>
+            <img src="./images/order1.jpg" class="card-img-top" alt="..." >
+            <div class="card-body">
+              <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+              <h5 class="card-title">Delicious Food</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ducimus illo quos a pariatur ab culpa iure eius omnis amet!</p>
+             <br>
+             <a href="#" class="btn">Add to Cart</a>
+                  <span>Rs.1400</span>
+            </div>
+          </div>
+          <div class="card menuCard">
+            <img src="./images/order2.webp" class="card-img-top" alt="...">
+            <i id="heart" class="fa fa-heart" aria-hidden="true"></i>
+            <div class="card-body">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+              <h5 class="card-title">Delicious Food</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ducimus illo quos a pariatur ab culpa iure eius omnis amet!</p>
+             <br>
+             <a href="#" class="btn">Add to Cart</a>
+                  <span>Rs.1400</span>
+            </div>
+          </div>
+          <div class="card menuCard">
+            <img src="./images/order3.jpg" class="card-img-top" alt="...">
+            <i  id="heart" class="fa fa-heart" aria-hidden="true"></i>
+            <div class="card-body">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+              <h5 class="card-title">Delicious Food</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ducimus illo quos a pariatur ab culpa iure eius omnis amet!</p>
+             <br>
+             <a href="#" class="btn">Add to Cart</a>
+                  <span>Rs.1400</span>
+            </div>
+          </div>
+        </div>
+        <div class="innerCard">
+            <div class="card menuCard">
+                <img src="./images/order4.webp" class="card-img-top" alt="..." height="170px">
+                <i id="heart" class="fa fa-heart" aria-hidden="true"></i>
+                <div class="card-body">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <h5 class="card-title">Delicious Food</h5>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ducimus illo quos a pariatur ab culpa iure eius omnis amet!</p>
+                  <br>
+                  <a href="#" class="btn">Add to Cart</a>
+                  <span>Rs.1400</span>
+                </div>
+              </div>
+              <div class="card menuCard">
+                <img src="./images/order5.webp" class="card-img-top" alt="...">
+                <i id="heart" class="fa fa-heart" aria-hidden="true"></i>  
+                <div class="card-body">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <h5 class="card-title">Delicious Food</h5>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ducimus illo quos a pariatur ab culpa iure eius omnis amet!</p>
+                  <br>
+                  <a href="#" class="btn">Add to Cart</a>
+                  <span>Rs.1400</span>
+                </div>
+              </div>
+              <div class="card menuCard">
+                <img src="./images/order6.webp" class="card-img-top" alt="...">
+                <i id="heart" class="fa fa-heart" aria-hidden="true"></i>
+                <div class="card-body">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <h5 class="card-title">Delicious Food</h5>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ducimus illo quos a pariatur ab culpa iure eius omnis amet!</p>
+                 <br>
+                 <a href="#" class="btn">Add to Cart</a>
+                  <span>Rs.1400</span>
+                </div>
+              </div>
+            </div>
+            <div class="innerCard">
+                <div class="card menuCard">
+                    <img src="./images/order7.jpg" class="card-img-top" alt="...">
+                    <i id="heart" class="fa fa-heart" aria-hidden="true"></i>
+                    <div class="card-body">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa-regular fa-star-half-stroke"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <h5 class="card-title">Delicious Food</h5>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ducimus illo quos a pariatur ab culpa iure eius omnis amet!</p>
+                     <br>
+                     <a href="#" class="btn">Add to Cart</a>
+                  <span>Rs.1400</span>
+                    </div>
+                  </div>
+                  <div class="card menuCard">
+                    <img src="./images/donut.jpg" class="card-img-top" alt="...">
+                    <i id="heart" class="fa fa-heart" aria-hidden="true"></i>
+                    <div class="card-body">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <h5 class="card-title">Delicious Food</h5>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ducimus illo quos a pariatur ab culpa iure eius omnis amet!</p>
+                     <br>
+                     <a href="#" class="btn">Add to Cart</a>
+                  <span>Rs.1400</span>
+                    </div>
+                  </div>
+                  <div class="card menuCard">
+                    <img src="./images/order8.jpg" class="card-img-top" alt="...">
+                    <i id="heart" class="fa fa-heart" aria-hidden="true"></i>
+                    <div class="card-body">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <h5 class="card-title">Delicious Food</h5>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ducimus illo quos a pariatur ab culpa iure eius omnis amet!</p>
+                     <br>
+                     <a href="#" class="btn">Add to Cart</a>
+                  <span>Rs.1400</span>
+                    </div>
+                  </div>
+                </div> 
+      </section>
+
+      <!-- Review -->
+
+      <section class="review" id="Review">
+        <h4>Customer Review's</h4>
+        <h1>WHAT THEY SAY</h1>
+        <div id="carouselExampleSlidesOnly" class="carousel carousel-dark slide" data-bs-touch="false" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active d-flex justify-content-center">
+              <div class="card-wrapper">
+                <div class="card">
+                  <img src="./images/profile pic.jpg" class="card-img-top" alt="...">
+                  <div class="card-body" >
+                    <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+                    <h3>JON DOE</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloremque dolorum nulla aperiam eligendi dolorem? Dolores quam, quo impedit quibusdam quae optio magnam non maxime inventore provident. Maiores, exercitationem dolorum!</p>
+                  </div>
+                </div> 
+                <div class="card">
+                  <img src="./images/profile pic.jpg2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                          <h3>JON DOE</h3>
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsum inventore, eos consequuntur voluptate ex totam voluptas saepe, rerum facere quibusdam laboriosam architecto nihil repellendus ducimus veniam sequi consectetur sunt!</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="./images/profile pic3.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                          <h3>JON DOE</h3>
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsum inventore, eos consequuntur voluptate ex totam voluptas saepe, rerum facere quibusdam laboriosam architecto nihil repellendus ducimus veniam sequi consectetur sunt!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item d-flex justify-content-center">
+              <div class="card-wrapper">
+                <div class="card">
+                  <img src="./images/profile pic3.jpg" class="card-img-top" alt="...">
+                  <div class="card-body" >
+                    <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+                    <h3>JON DOE</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloremque dolorum nulla aperiam eligendi dolorem? Dolores quam, quo impedit quibusdam quae optio magnam non maxime inventore provident. Maiores, exercitationem dolorum!</p>
+                  </div>
+                </div> 
+                <div class="card">
+                  <img src="./images/profile pic4.jpg" class="card-img-top" alt="...">
+                  <div class="card-body" >
+                    <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+                    <h3>JON DOE</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloremque dolorum nulla aperiam eligendi dolorem? Dolores quam, quo impedit quibusdam quae optio magnam non maxime inventore provident. Maiores, exercitationem dolorum!</p>
+                  </div>
+                </div> 
+                 <div class="card">
+                  <img src="./images/profile pic5.jpg" class="card-img-top" alt="...">
+                  <div class="card-body" >
+                    <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+                    <h3>JON DOE</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloremque dolorum nulla aperiam eligendi dolorem? Dolores quam, quo impedit quibusdam quae optio magnam non maxime inventore provident. Maiores, exercitationem dolorum!</p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+            <div class="carousel-item d-flex justify-content-center">
+              <div class="card-wrapper">
+                <div class="card">
+                  <img src="./images/profile pic6.jpg" class="card-img-top" alt="...">
+                  <div class="card-body" >
+                    <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+                    <h3>JON DOE</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloremque dolorum nulla aperiam eligendi dolorem? Dolores quam, quo impedit quibusdam quae optio magnam non maxime inventore provident. Maiores, exercitationem dolorum!</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="./images/profile pic3.jpg" class="card-img-top" alt="...">
+                  <div class="card-body" >
+                    <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+                    <h3>JON DOE</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloremque dolorum nulla aperiam eligendi dolorem? Dolores quam, quo impedit quibusdam quae optio magnam non maxime inventore provident. Maiores, exercitationem dolorum!</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="./images/profile pic.jpg" class="card-img-top" alt="...">
+                  <div class="card-body" >
+                    <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+                    <h3>JON DOE</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloremque dolorum nulla aperiam eligendi dolorem? Dolores quam, quo impedit quibusdam quae optio magnam non maxime inventore provident. Maiores, exercitationem dolorum!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+</section>
+<section class="orderBox" id="Order">
+  <h4>Order Now</h4>
+  <h1>FREE AND FAST</h1>
+  <div class="smallBox">
+  <div class="ordersheet">
+    <p>Your Name</p>
+    <input type="text" placeholder="Enter your name">
+    <p>Your Order</p>
+    <input type="text"placeholder="Enter food name">
+    <p>How Much</p>
+    <input type="number" placeholder="how many orders">
+    <p>Your Address</p>
+    <textarea name="text area" id="" cols="40" rows="7" placeholder="Enter your Address"></textarea>
+    <button class="orderBtn">Order Now</button>
+  </div>
+  <div class="ordersheet">
+    <p>Your Number</p>
+    <input type="text" placeholder="Enter your name">
+    <p>Additional Food</p>
+    <input type="text"placeholder="Enter food name">
+    <p>Date And Time</p>
+    <input type="datetime-local" placeholder="how many orders">
+    <p>Your Address</p>
+    <textarea name="text area" id="" cols="40" rows="7" placeholder="Enter your Address"></textarea>
+  </div>
+</div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="backToHome">
+   <a href="#Home"><i class="fa-solid fa-arrow-up" ></i></a> 
+  </div>
+  <div class="footerBox">
+  <div class="footerlist">
+    <li id="tags">Locations</li>
+    <li>Pakistan</li>
+    <li>Russia</li>
+    <li>Qatar</li>
+    <li>France</li>
+    <li>China</li>
+  </div>
+  <div class="footerlist">
+    <li id="tags">Quick links</li>
+    <li>Home</li>
+    <li>Dishes</li>
+    <li>About</li>
+    <li>Menu</li>
+    <li>Review</li>
+    <li>Order</li>
+  </div>
+  <div class="footerlist">
+    <li id="tags">Contact Info</li>
+    <li>+132-456-7890</li>
+    <li>+111-222-3334</li>
+    <li>Abc@examplegmail.com</li>
+    <li>xyz@examplegmail.com</li>
+    <li>Karachi,Pakistan-450019</li>
+  </div>
+  <div class="footerlist">
+    <li id="tags">Follow Us</li>
+    <li>Facebook</li>
+    <li>Twitter</li>
+    <li>Instagram</li>
+    <li>LinkedIn</li>
+  </div>
+</div>
+  <p>Copyright @ 2023 by Amir-khan</p>
+ </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>
