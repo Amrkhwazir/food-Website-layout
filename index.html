@@ -53,7 +53,6 @@
         transform: scale(1.1);
     }
     .main{
-        width: 100%;
         height: 500px;
         background-color: white;
         padding-top: 10px;
@@ -92,7 +91,7 @@
     }
     .slider img{
         height: 400px;
-        width: 50%;
+        width: 500px;
     }
     .cards{
         background-color: whitesmoke;
@@ -430,6 +429,59 @@
       background-color: rgb(74, 171, 115);
       color: white;
     }
+
+    /* media quierie */
+      
+
+      @media(min-width: 1024px) and (max-width: 1439px){
+
+        .operwlahissa{
+          box-shadow: 0px 1px 3px 0px gray;
+      }
+      .operwlahissa a{
+          font-weight: 600;
+          color: rgb(54, 52, 52);
+      }
+      .pehlaBox{
+          display: flex !important;
+          justify-content: flex-start !important;
+          gap: 20px;
+      }
+      .pehlaBox .btn{
+        text-decoration: none;
+          margin-left: 10px;
+          transition: 0.6s ease;
+      }
+      
+      .icon i{
+      font-size: 18px;
+        width: 30px;
+        height: 30px;
+        background-color: whitesmoke;
+        padding: 7px 10px;
+        border-radius: 5px;
+        transition: all 0.5s ;
+      }
+      .slider{
+          display: flex !important;
+          justify-content: space-around;
+          padding: 20px;
+
+      }
+      .description{
+          margin: 30px;
+          padding: 60px 50px;
+          width: 380px;
+          height: 400px;
+      }
+      
+      .slider img{
+          height: 380px;
+          width: 450px;
+          padding-left: 50px;
+          margin-right: 150px;
+      }
+      }
 
 </style>
 <body>
